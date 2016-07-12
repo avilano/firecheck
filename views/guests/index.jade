@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h1 Guests List
+  ul
+    each guest in guests
+      li=guest
+  form(action="", method="post")
+    p Name:
+    input(type="text", name="name")
+    br
+    p Message:
+    input(type="text", name="message")
+    br
+    br
+    input(type="submit")
