@@ -5,11 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+const MONGO_HOST = process.env.OPENSHIFT_MONGODB_DB_HOST;
+const MONGO_PORT = process.env.OPENSHIFT_MONGODB_DB_PORT;
+
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/guestbook');
+mongoose.connect('mongodb://admin:kZ8jwaI56JLF' + MONGO_HOST + ':' + MONGO_PORT + '/guestbook');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var guests = require('./routes/guests');
 
 var app = express();
