@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+// Database schema
 const Guest = require('../models/Guest.js');
 
 router.get('/', function(req, res, next){

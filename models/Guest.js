@@ -1,5 +1,5 @@
+// Constructing database with Schema
 const mongoose = require('mongoose');
-
 const GuestSchema = new mongoose.Schema({
   guest: [{
     name: String,
