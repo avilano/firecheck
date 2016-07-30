@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    h1= title
+    form(action="", name="fireform", method="post")
+      p Hello :user please select your station and shift:
+      div.input
+          span.label Shifts: 
+          select#shift
+            option(value='A' name='A') A
+            |   
+            option(value='B' name='B') B
+            |   
+            option(value='C' name='C') C
+      div.input
+          span.label Stations: 
+          select#station
+            option(value='1' name='mainstation') Main Station
+            |   
+            option(value='2' name='smallstation') Small Station
+            |   
+            option(value='3' name='tinystation') Tiny Station
+      p Choose Unit: 
+      div.input
+          span.label Unit #: 
+          select#unitNum
+            option(value='unitNum' name='UnitNum') UnitNum
+            | 
+      div.actions
+          input(type="submit", value="Start")

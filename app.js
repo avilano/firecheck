@@ -7,11 +7,10 @@ const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
 // Connecting to the database:
-mongoose.connect('mongodb://localhost/guestbook');
+mongoose.connect('mongodb://localhost/firetruckbase');
 // routes
 const routes = require('./routes/index');
-const users = require('./routes/users');
-const guests = require('./routes/guests');
+//const users = require('./routes/splash');
 
 const app = express();
 
@@ -27,8 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/guests', guests);
-app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -60,6 +58,4 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-
 module.exports = app;
