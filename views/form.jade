@@ -4,14 +4,20 @@ extends layout
 mixin range(rule)
   label(for=rule.id)= rule.label
   input.form-control(type=rule.type, required, min=rule.options.min, max=rule.options.max, step=rule.options.step)
-
+  
+mixin dropdown(rule)
+  label(for=rule.id)= rule.label
+  select
+    option(value='true') satisfactory
+    option(value='false') Non-satisfactory
+  
 mixin text(rule)
   label(for=rule.id)= rule.label
   input.form-control(type=rule.type, required)
 
-  mixin text(rule)
-    label(for=rule.id)= rule.label
-    input.form-control(type=rule.type, required)
+mixin checkbox(rule)
+  label(for=rule.id)= rule.label
+  input.form-control(type=rule.type, required)
 
 block content
   table#mainData
@@ -33,14 +39,18 @@ block content
       td Pharr Main
       td Day: 
       td Monday
-  
-  hr
+
       
   form
+   p Please check the box if status is satisfactory:
     - each rule in ruleSet
       .form-group
         if rule.type == 'text'
           +text(rule)
         else if rule.type == 'range'
           +range(rule)
+        else if rule.type == 'checkbox'
+          +checkbox(rule)
+        else if rule.type == 'dropdown'
+          +dropdown(rule)
     button.btn.btn-default(type='submit') Submit

@@ -32,31 +32,123 @@ router.post('/splash', function (req, res) {
     res.redirect('/form');
 });
 
-router.get('/form', function(req, res, next) {
+router.get('/truck', function(req, res, next) {
   var ruleSet = [{
-    module: 'Engine Component',
+    module: 'Engine Compartment',
     id: 'battery-compartment',
-    value: "battery-compartment",
+    value: 'battery-compartment',
     name: 'battery-compartment',
-    type: 'checkbox',
-    label: 'Battery Compartment'
+    type: 'dropdown',
+    label: 'Battery Compartment: '
   },{
-    module: 'Engine Component',
-    id: 'tire-pressure',
+    module: 'Engine Compartment',
+    id: 'engine-oil-level',
+    value: 'engine-oil-level',
+    name: 'engine-oil-level',
     type: 'range',
-    label: 'Tire Pressure',
-    options: { min: 0, max: 50, step: 0.1 }
-  }, {
-    id: 'paint-condition',
-    type: 'text',
-    module: 'Body',
-    label: 'Paint Condition'
+    label: 'Engine Oil Level: ',
+    options: { min: 0, max: 1, step: 0.25 } // these are for range type
+  },{
+    module: 'Engine Compartment',
+    id: 'air-filters',
+    value: 'air-filters',
+    name: 'air-filters',
+    type: 'dropdown',
+    label: 'Air Filters: '
+  },{
+    module: 'Engine Compartment',
+    id: 'radiator-hoses',
+    value: 'radiator-hoses',
+    name: 'radiator-hoses',
+    type: 'dropdown',
+    label: 'Radiator Hoses: '
+  },{
+    module: 'Engine Compartment',
+    id: 'powersteering-level',
+    value: 'powersteering-level',
+    name: 'powersteering-level',
+    type: 'range',
+    label: 'Powersteering Level: ',
+    options: { min: 0, max: 1, step: 0.25 } // these are for range type
+  },{
+    module: 'Engine Compartment',
+    id: 'engine-appearance',
+    value: 'engine-appearance',
+    name: 'engine-appearance',
+    type: 'dropdown',
+    label: 'Engine Appearance: '
+  },{
+    module: 'Outer Perimeter', ///////
+    id: 'wheel-pressure',
+    value: 'wheel-pressure',
+    name: 'wheel-pressure',
+    type: 'dropdown',
+    label: 'Wheel Pressure: '
+  },{
+    module: 'Outer Perimeter',
+    id: 'vehicle-appearance',
+    value: 'vehicle-appearance',
+    name: 'vehicle-appearance',
+    type: 'dropdown',
+    label: 'Vehicle Appearance: '
+  },{
+    module: 'Outer Perimeter',
+    id: 'hose-loads',
+    value: 'hose-loads',
+    name: 'hose-loads',
+    type: 'dropdown',
+    label: 'Hose Loads: '
+  },{
+    module: 'Outer Perimeter',
+    id: 'license-plate',
+    value: 'license-plate',
+    name: 'license-plate',
+    type: 'dropdown',
+    label: 'License Plate: '
+  },{
+    module: 'Outer Perimeter',
+    id: 'license-sticker',
+    value: 'license-sticker',
+    name: 'license-sticker',
+    type: 'dropdown',
+    label: 'License Sticker: '
+  },{
+    module: 'Outer Perimeter',
+    id: 'equipment-placement',
+    value: 'equipment-placement',
+    name: 'equipment-placement',
+    type: 'dropdown',
+    label: 'Equipment Placement: '
+  },{
+    module: 'Outer Perimeter',
+    id: 'water-tank-level',
+    value: 'water-tank-level',
+    name: 'water-tank-level',
+    type: 'range',
+    label: 'Water Tank Level: ',
+    options: { min: 0, max: 1, step: 0.25 } // these are for range type
+  },{
+    module: 'Start Engine',
+    id: 'electrical-switches',
+    value: 'electrical-switches',
+    name: 'electrical-switches',
+    type: 'dropdown',
+    label: 'Electrical Switches: '
+  },{
+    module: 'Gauge Condition',
+    id: 'gauge-condition',
+    value: 'gauge-condition',
+    name: ' gauge-condition',
+    type: 'dropdown',
+    label: 'Gauge Condition: '
   }];
 
   res.render('form', {
     title: ':UnitNum Form:',
     ruleSet: ruleSet
   });
+
 });
+
 
 module.exports = router;
