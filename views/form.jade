@@ -9,6 +9,10 @@ mixin text(rule)
   label(for=rule.id)= rule.label
   input.form-control(type=rule.type, required)
 
+  mixin text(rule)
+    label(for=rule.id)= rule.label
+    input.form-control(type=rule.type, required)
+
 block content
   table#mainData
     tr 

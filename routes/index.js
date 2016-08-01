@@ -34,9 +34,16 @@ router.post('/splash', function (req, res) {
 
 router.get('/form', function(req, res, next) {
   var ruleSet = [{
+    module: 'Engine Component',
+    id: 'battery-compartment',
+    value: "battery-compartment",
+    name: 'battery-compartment',
+    type: 'checkbox',
+    label: 'Battery Compartment'
+  },{
+    module: 'Engine Component',
     id: 'tire-pressure',
     type: 'range',
-    module: 'Engine Component',
     label: 'Tire Pressure',
     options: { min: 0, max: 50, step: 0.1 }
   }, {
