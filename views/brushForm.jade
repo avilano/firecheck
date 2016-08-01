@@ -1,0 +1,50 @@
+extends layout
+
+// This is jade scripts: http://jade-lang.com/reference/mixins/
+mixin range(rule)
+  label(for=rule.id)= rule.label
+  input.form-control(type=rule.type, required, min=rule.options.min, max=rule.options.max, step=rule.options.step)
+
+mixin text(rule)
+  label(for=rule.id)= rule.label
+  input.form-control(type=rule.type, required)
+
+  mixin text(rule)
+    label(for=rule.id)= rule.label
+    input.form-control(type=rule.type, required)
+
+block content
+  table#mainData
+    tr 
+      td Date: #{moment(Date.now()).format('MM/DD/YYYY')}
+      td Unit# 382 - Brush 32
+      td Shift: 
+        select
+          option(value='A') A
+          option(value='B') B
+          option(value='C') C
+      td Station: 
+        select
+          option(value='1') 1 - FM 495
+          option(value='2') 2 - Central Station
+          option(value='3') 3 - Las Milpas
+        
+    tr 
+      td Engine Hrs: 
+        input(type='text', name='engHrs' autofocus)
+      td VIN# 1F95281388H140563
+      td Checked By:
+      td
+        input(type='text', name="auditor")
+      
+  hr
+      
+  form
+    - each rule in ruleSet
+      .form-group
+        if rule.type == 'text'
+          +text(rule)
+        else if rule.type == 'range'
+          +range(rule)
+    button.btn.btn-default(type='submit') Submit
+    
