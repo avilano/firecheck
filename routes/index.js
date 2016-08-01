@@ -128,19 +128,26 @@ router.get('/truck', function(req, res, next) {
     label: 'Water Tank Level: ',
     options: { min: 0, max: 1, step: 0.25 } // these are for range type
   },{
-    module: 'Start Engine',
+    module: 'Start Engine',       ///////////
     id: 'electrical-switches',
     value: 'electrical-switches',
     name: 'electrical-switches',
     type: 'dropdown',
     label: 'Electrical Switches: '
   },{
-    module: 'Gauge Condition',
+    module: 'Start Engine',
     id: 'gauge-condition',
     value: 'gauge-condition',
-    name: ' gauge-condition',
+    name: 'gauge-condition',
     type: 'dropdown',
     label: 'Gauge Condition: '
+  },{
+    module: 'Start Engine',
+    id: 'air-tank-psi',
+    value: 'air-tank-psi',
+    name: 'air-tank-psi',
+    type: 'dropdown',
+    label: 'Air Tank Psi: '
   }];
 
   res.render('form', {
