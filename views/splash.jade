@@ -2,15 +2,16 @@ extends layout
 
 block content
     h1= title
+    hr
+    p Please select the vehicle to audit:
     form(action="", name="fireform", method="post")
-      hr
-      p Please select the vehicle to audit:
       div.input
         span.Vehicle 
-        select#truckType
-          option(value='truck' name='truck') Truck
-          option(value='brush' name='brush') Brush
-          option(value='rescue' name='rescue') Rescue
+        select(class='truckType' name='vechiclePicker')
+          option(value='0' name='truck') Select a Vehicle
+          option(value='1' name='truck') Truck
+          option(value='2' name='brush') Brush
+          option(value='3' name='rescue') Rescue
       br
       div.actions
           input(type="submit", value="Select")

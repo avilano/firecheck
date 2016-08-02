@@ -5,7 +5,7 @@ const path = require('path');
 // const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
+let bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
 // Connecting to the database:
@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost/firetruckbase');
 const routes = require('./routes/index');
 //const users = require('./routes/splash');
 
-const app = express();
+let app = express();
 app.locals.moment = require('moment');
 
 // view engine setup
@@ -24,7 +24,7 @@ app.set('view engine', 'jade');
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
