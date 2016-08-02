@@ -5,19 +5,19 @@ mixin range(rule)
   label(for=rule.id)= rule.label
   input.form-control(type=rule.type, required, min=rule.options.min, max=rule.options.max, step=rule.options.step)
 
-  mixin dropdown(rule)
-    label(for=rule.id)= rule.label
-    select
-      option(value='true') satisfactory
-      option(value='false') Non-satisfactory
-    
-  mixin text(rule)
-    label(for=rule.id)= rule.label
-    input.form-control(type=rule.type, required)
+mixin dropdown(rule)
+  label(for=rule.id)= rule.label
+  select
+    option(value='true') satisfactory
+    option(value='false') Non-satisfactory
+  
+mixin text(rule)
+  label(for=rule.id)= rule.label
+  input.form-control(type=rule.type, required)
 
-  mixin checkbox(rule)
-    label(for=rule.id)= rule.label
-    input.form-control(type=rule.type, required)
+mixin checkbox(rule)
+  label(for=rule.id)= rule.label
+  input.form-control(type=rule.type, required)
 
 
 block content

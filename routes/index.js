@@ -541,9 +541,9 @@ router.get('/brush', function(req, res, next) {
   }];
 
 // needs to be changed back to 'form' to show form.jade
-  res.render('brushForm', {
+  res.render('rescueForm', {
     title: ':UnitNum Form:',
-    ruleSet: ruleSet, ruleSet2, ruleSet4, ruleSet6 //only need 'ruleSet' after ruleSet: to work w/form.jade
+    ruleSet: ruleSet//, ruleSet2, ruleSet4, ruleSet6 //only need 'ruleSet' after ruleSet: to work w/form.jade
   });
 
 });
