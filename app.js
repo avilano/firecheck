@@ -12,7 +12,10 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/firetruckbase');
 // routes
 const routes = require('./routes/index');
-//const users = require('./routes/splash');
+const truck = require('./data/truck');
+const brush = require('./data/brush');
+const rescue = require('./data/rescue');
+
 
 let app = express();
 app.locals.moment = require('moment');
@@ -29,6 +32,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/truck', truck);
+app.use('/brush', brush);
+app.use('/rescue', rescue);
 
 
 // catch 404 and forward to error handler
