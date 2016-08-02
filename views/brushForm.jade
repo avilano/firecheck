@@ -1,0 +1,112 @@
+extends layout
+
+// This is jade scripts: http://jade-lang.com/reference/mixins/
+mixin range(rule)
+  label(for=rule.id)= rule.label
+  input.form-control(type=rule.type, required, min=rule.options.min, max=rule.options.max, step=rule.options.step)
+  
+mixin dropdown(rule)
+  label(for=rule.id)= rule.label
+  select
+    option(value='-1')
+    option(value='true') satisfactory
+    option(value='false') Non-satisfactory
+  
+mixin text(rule)
+  label(for=rule.id)= rule.label
+  input.form-control(type=rule.type, required)
+
+mixin textQty(rule)
+  label(for=rule.id)= rule.label
+  br
+  label Required: 1
+  br
+  label Actual:
+  input.form-control(type=rule.type, required)
+
+mixin checkbox(rule)
+  label(for=rule.id)= rule.label
+  input.form-control(type=rule.type, required)
+
+block content
+  table#mainData
+    tr 
+      td Date: #{moment(Date.now()).format('MM/DD/YYYY')}
+      td Unit# 382 - Brush 32
+      td Shift: 
+        select
+          option(value='-1')
+          option(value='A') A
+          option(value='B') B
+          option(value='C') C
+      td Station: 
+        select
+          option(val='-1')
+          option(value='1') 1 - FM 495
+          option(value='2') 2 - Central Station
+          option(value='3') 3 - Las Milpas
+    tr 
+      td Engine Hrs: 
+        input(type='text', name='engHrs')
+      td VIN# 1F95281388H140563
+      td Checked By:
+      td 
+        input(type='text', name="auditor" autofocus)
+  br
+  p Please check the box if status is satisfactory:
+  hr
+  form
+     h3 Engine Compartment
+     each rule in ruleSet
+      .form-group
+        if rule.type == 'text'
+          +text(rule)
+        else if rule.type == 'range'
+          +range(rule)
+        else if rule.type == 'checkbox'
+          +checkbox(rule)
+        else if rule.type == 'dropdown'
+          +dropdown(rule)
+  hr
+  .form
+  p
+    h3 Outer Perimeter
+    each rule in ruleSet2
+      .form-group
+        if rule.type == 'text'
+          +text(rule)
+        else if rule.type == 'range'
+          +range(rule)
+        else if rule.type == 'checkbox'
+          +checkbox(rule)
+        else if rule.type == 'dropdown'
+          +dropdown(rule)
+  hr
+  .form
+  p
+    h3 Start Engine
+    each rule in ruleSet4
+      .form-group
+        if rule.type == 'text'
+          +text(rule)
+        else if rule.type == 'range'
+          +range(rule)
+        else if rule.type == 'checkbox'
+          +checkbox(rule)
+        else if rule.type == 'dropdown'
+          +dropdown(rule)
+  hr
+  .form
+  p
+    h3 Inside Cab
+    each rule in ruleSet6
+      .form-group
+        if rule.type == 'text'
+          +textQty(rule)
+        else if rule.type == 'range'
+          +range(rule)
+        else if rule.type == 'checkbox'
+          +checkbox(rule)
+        else if rule.type == 'dropdown'
+          +dropdown(rule)
+    button.btn.btn-default(type='submit') Submit
