@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
     title: 'Equipment - Weekly Report Login'
   });
 });
-
 router.post('/', function (req, res) {
   res.redirect('/splash');
 });
@@ -33,7 +32,4 @@ router.post('/splash', function (req, res) {
       res.redirect('/rescue');
     }
 });
-
-
-
 module.exports = router;

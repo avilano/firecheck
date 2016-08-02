@@ -12,9 +12,9 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/firetruckbase');
 // routes
 const routes = require('./routes/index');
-const truck = require('./data/truck');
+const truck = require('./routes/truck');
 const brush = require('./routes/brush');
-const rescue = require('./data/rescue');
+const rescue = require('./routes/rescue');
 
 
 let app = express();
