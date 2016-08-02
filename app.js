@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost/firetruckbase');
 // routes
 const routes = require('./routes/index');
 const truck = require('./data/truck');
-const brush = require('./data/brush');
+const brush = require('./routes/brush');
 const rescue = require('./data/rescue');
 
 

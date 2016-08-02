@@ -54,59 +54,20 @@ block content
         input(type='text', name="auditor" autofocus)
   br
   p Please check the box if status is satisfactory:
+  
   hr
-  form
-     h3 Engine Compartment
-     each rule in ruleSet
-      .form-group
-        if rule.type == 'text'
-          +text(rule)
-        else if rule.type == 'range'
-          +range(rule)
-        else if rule.type == 'checkbox'
-          +checkbox(rule)
-        else if rule.type == 'dropdown'
-          +dropdown(rule)
-  hr
-  .form
-  p
-    h3 Outer Perimeter
-    each rule in ruleSet2
-      .form-group
-        if rule.type == 'text'
-          +text(rule)
-        else if rule.type == 'range'
-          +range(rule)
-        else if rule.type == 'checkbox'
-          +checkbox(rule)
-        else if rule.type == 'dropdown'
-          +dropdown(rule)
-  hr
-  .form
-  p
-    h3 Start Engine
-    each rule in ruleSet4
-      .form-group
-        if rule.type == 'text'
-          +text(rule)
-        else if rule.type == 'range'
-          +range(rule)
-        else if rule.type == 'checkbox'
-          +checkbox(rule)
-        else if rule.type == 'dropdown'
-          +dropdown(rule)
-  hr
-  .form
-  p
-    h3 Inside Cab
-    each rule in ruleSet6
-      .form-group
-        if rule.type == 'text'
-          +textQty(rule)
-        else if rule.type == 'range'
-          +range(rule)
-        else if rule.type == 'checkbox'
-          +checkbox(rule)
-        else if rule.type == 'dropdown'
-          +dropdown(rule)
-    button.btn.btn-default(type='submit') Submit
+  
+  form(action="", method="post")
+    - each set, section in ruleSet
+      h3=section
+      - each rule in set
+        .form-group
+          if rule.type == 'text'
+            +text(rule)
+          else if rule.type == 'range'
+            +range(rule)
+          else if rule.type == 'checkbox'
+            +checkbox(rule)
+          else if rule.type == 'dropdown'
+            +dropdown(rule)
+      

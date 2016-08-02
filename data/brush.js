@@ -1,8 +1,4 @@
-const express = require('express');
-const router = express.Router();
-
-router.get('/brush', function(req, res, next) {
-  var rules = {
+module.exports = {
   'engine-compartment': [{
     id: 'battery-compartment',
     value: 'battery-compartment',
@@ -416,10 +412,3 @@ router.get('/brush', function(req, res, next) {
     label: 'Combi Tool'
   }]
 };
-
-  res.render('brushForm', {
-    title: ':UnitNum Form:',
-    ruleSet: rules
-  });
-});
-module.exports = router;
