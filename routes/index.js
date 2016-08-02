@@ -148,6 +148,13 @@ router.get('/truck', function(req, res, next) {
     name: 'air-tank-psi',
     type: 'dropdown',
     label: 'Air Tank Psi: '
+  },{
+    module: 'Start Engine',
+    id: 'flashlights',
+    value: 'flashlights',
+    name: 'air-tank-psi',
+    type: 'dropdown',
+    label: 'Air Tank Psi: '
   }];
 
   res.render('form', {
