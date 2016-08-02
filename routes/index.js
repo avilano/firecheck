@@ -159,187 +159,192 @@ router.get('/truck', function(req, res, next) {
 
 router.get('/brush', function(req, res, next) {
   var ruleSet = [{
-    module: 'Engine Component',
+    module: 'Engine Compartment',
     id: 'battery-compartment',
     value: 'battery-compartment',
     name: 'battery-compartment',
-    type: 'checkbox',
-    label: 'Battery Compartment'
+    type: 'dropdown',
+    label: 'Battery Compartment:'
   }, {
-    module: 'Engine Component',
+    module: 'Engine Compartment',
     id: 'engine-oil-level',
     value: 'engine-oil-level',
     name: 'engine-oil-level',
-    type: 'range',
-    label: 'Engine Oil Level',
-    options: { min: 0, max: 1, step: 0.25 }
+    type: 'dropdown',
+    label: 'Engine Oil Level:'
   }, {
-    module: 'Engine Component',
+    module: 'Engine Compartment',
     id: 'air-filter',
     value: 'air-filter',
     name: 'air-filter',
-    type: 'drop',
-    label: 'Air Filter'
+    type: 'dropdown',
+    label: 'Air Filter:'
   }, {
-    module: 'Engine Component',
+    module: 'Engine Compartment',
     id: 'radiator-hoses',
     value: 'radiator-hoses',
     name: 'radiator-hoses',
-    type: 'text',
-    label: 'Radiator Hoses'
+    type: 'dropdown',
+    label: 'Radiator Hoses:'
   }, {
-    module: 'Engine Component',
+    module: 'Engine Compartment',
     id: 'power-steering-level',
     value: 'power-steering-level',
     name: 'power-steering-level',
-    type: 'text',
-    label: 'Power Steering Level'
+    type: 'dropdown',
+    label: 'Power Steering Level:'
   }, {
-    module: 'Engine Component',
+    module: 'Engine Compartment',
     id: 'engine-appearance',
     value: 'engine-appearance',
     name: 'engine-appearance',
-    type: 'text',
-    label: 'Engine Appearance'
-  }, {
+    type: 'dropdown',
+    label: 'Engine Appearance:'
+  }];
+
+  var ruleSet2 = [{
     module: 'Outer Perimeter',
     id: 'tire-pressure',
     value: 'tire-pressure',
     name: 'tire-pressure',
-    type: 'text',
-    label: 'Radiator Hoses'
+    type: 'dropdown',
+    label: 'Radiator Hoses:'
   }, {
     module: 'Outer Perimeter',
     id: 'vehicle-appearance',
     value: 'vehicle-appearance',
     name: 'vehicle-appearance',
-    type: 'text',
-    label: 'Vehicle Apperance'
+    type: 'dropdown',
+    label: 'Vehicle Apperance:'
   }, {
     module: 'Outer Perimeter',
     id: 'hose-loads',
     value: 'hose-loads',
     name: 'hose-loads',
-    type: 'text',
-    label: 'Hose Loads'
+    type: 'dropdown',
+    label: 'Hose Loads:'
   }, {
     module: 'Outer Perimeter',
     id: 'license-plate',
     value: 'license-plate',
     name: 'license-plate',
-    type: 'text',
-    label: 'License Plate'
+    type: 'dropdown',
+    label: 'License Plate:'
   }, {
     module: 'Outer Perimeter',
     id: 'license-sticker',
     value: 'license-sticker',
     name: 'license-sticker',
-    type: 'text',
-    label: 'Registration Sticker'
+    type: 'dropdown',
+    label: 'Registration Sticker:'
   }, {
     module: 'Outer Perimeter',
     id: 'equip-placement',
     value: 'equip-placement',
     name: 'equip-placement',
-    type: 'text',
-    label: 'Equipment Placement'
+    type: 'dropdown',
+    label: 'Equipment Placement:'
   }, {
     module: 'Outer Perimeter',
     id: 'water-tank',
     value: 'water-tank',
     name: 'water-tank',
-    type: 'text',
-    label: 'Water Tank Level'
+    type: 'dropdown',
+    label: 'Water Tank Level:'
   }, {
     module: 'Outer Perimeter',
     id: 'primer-reservoir',
     value: 'primer-reservoir',
     name: 'primer-reservoir',
-    type: 'text',
-    label: 'Primer Reservoir Level'
+    type: 'dropdown',
+    label: 'Primer Reservoir Level:'
   }, {
     module: 'Start Engine',
     id: 'elec-switch',
     value: 'elec-switch',
     name: 'elec-switch',
-    type: 'text',
-    label: 'Electrical Switches'
-  }, {
+    type: 'dropdown',
+    label: 'Electrical Switches:'
+  }];
+
+  var ruleSet4 = [{
     module: 'Start Engine',
     id: 'gauge-condition',
     value: 'gauge-condition',
     name: 'gauge-condition',
-    type: 'text',
-    label: 'Gauge Condition'
+    type: 'dropdown',
+    label: 'Gauge Condition:'
   }, {
     module: 'Start Engine',
     id: 'air-tank',
     value: 'air-tank',
     name: 'air-tank',
-    type: 'text',
-    label: 'Air Tank PSI'
+    type: 'dropdown',
+    label: 'Air Tank PSI:'
   }, {
     module: 'Start Engine',
     id: 'flashlights',
     value: 'flashlights',
     name: 'flash-lights',
-    type: 'text',
-    label: 'Flashlights'
+    type: 'dropdown',
+    label: 'Flashlights:'
   }, {
     module: 'Start Engine',
     id: 'interior-inspect',
     value: 'interior-inspet',
     name: 'interior-inspet',
-    type: 'text',
-    label: 'Interior Inspection'
+    type: 'dropdown',
+    label: 'Interior Inspection:'
   }, {
     module: 'Start Engine',
     id: 'mirrors',
     value: 'mirrors',
     name: 'mirrors',
-    type: 'text',
-    label: 'Mirrors'
+    type: 'dropdown',
+    label: 'Mirrors:'
   }, {
     module: 'Start Engine',
     id: 'windshield',
     value: 'windshield',
     name: 'windshield',
-    type: 'text',
-    label: 'Windshield'
+    type: 'dropdown',
+    label: 'Windshield:'
   }, {
     module: 'Start Engine',
     id: 'charge-system',
     value: 'charge-system',
     name: 'charge-system',
-    type: 'text',
-    label: 'Charging System'
+    type: 'dropdown',
+    label: 'Charging System:'
   }, {
     module: 'Start Engine',
     id: 'oil-pressure',
     value: 'oil-pressure',
     name: 'oil-pressure',
-    type: 'text',
-    label: 'Oil Pressure'
+    type: 'dropdown',
+    label: 'Oil Pressure:'
   }, {
     module: 'Start Engine',
     id: 'air-indicator',
     value: 'air-indicator',
     name: 'air-indicator',
-    type: 'text',
-    label: 'Air Indicator'
-  }, {
+    type: 'dropdown',
+    label: 'Air Indicator:'
+  }];
+
+  var ruleSet6 = [{
     module: 'Inside Cab',
     id: 'flash-lights',
     value: 'flash-lights',
     name: 'flash-lights',
     type: 'text',
-    label: 'Flash Lights',
-    options: { min: 0, max: 1, step: 1 }
+    label: 'Flash Lights:'
   }];
 
-  res.render('form', {
+// needs to be changed back to 'form' to show form.jade
+  res.render('brushForm', {
     title: ':UnitNum Form:',
-    ruleSet: ruleSet
+    ruleSet: ruleSet, ruleSet2, ruleSet4, ruleSet6 //only need 'ruleSet' after ruleSet: to work w/form.jade
   });
 
 });
