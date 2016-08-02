@@ -1,0 +1,63 @@
+extends layout
+
+// This is jade scripts: http://jade-lang.com/reference/mixins/
+mixin range(rule)
+  label(for=rule.id)= rule.label
+  input.form-control(type=rule.type, required, min=rule.options.min, max=rule.options.max, step=rule.options.step)
+
+  mixin dropdown(rule)
+    label(for=rule.id)= rule.label
+    select
+      option(value='true') satisfactory
+      option(value='false') Non-satisfactory
+    
+  mixin text(rule)
+    label(for=rule.id)= rule.label
+    input.form-control(type=rule.type, required)
+
+  mixin checkbox(rule)
+    label(for=rule.id)= rule.label
+    input.form-control(type=rule.type, required)
+
+
+block content
+  table#mainData
+    tr 
+      td Date: #{moment(Date.now()).format('MM/DD/YYYY')}
+      td Unit# 312 - Rescue 32
+      td Shift: 
+        select
+          option(value='A') A
+          option(value='B') B
+          option(value='C') C
+      td Station: 
+        select
+          option(value='1') 1 - FM 495
+          option(value='2') 2 - Central Station
+          option(value='3') 3 - Las Milpas
+        
+    tr 
+      td Engine Hrs: 
+        input(type='text', name='engHrs')
+      td VIN# 4S7HU2D957CO59838
+      td Checked By:
+      td
+        input(type='text', name="auditor" autofocus)
+      
+  hr
+      
+  form
+   p Please check the box if status is satisfactory:
+    - each rule in ruleSet
+      .form-group
+        if rule.type == 'text'
+          +text(rule)
+        else if rule.type == 'range'
+          +range(rule)
+        else if rule.type == 'checkbox'
+          +checkbox(rule)
+        else if rule.type == 'dropdown'
+          +dropdown(rule)
+    button.btn.btn-default(type='submit') Submit
+    
+    
