@@ -7,17 +7,9 @@ router.get('/', function(req, res, next) {
     title: 'Equipment - Weekly Report Login'
   });
 });
-/*
-router.get('/:usrid', function(req, res, next) {
-  res.render('splash', {
-    title: 'Equipment - Weekly Report'
-  });
-});
-*/
+
 router.post('/', function (req, res) {
-    console.log('usr is: ' + req.body.usrname);
-    console.log('pwrd is: ' + req.body.passwrd);
-    res.redirect('/splash');
+  res.redirect('/splash');
 });
 
 router.get('/splash', function(req, res, next) {
@@ -27,9 +19,8 @@ router.get('/splash', function(req, res, next) {
 });
 // Hanlde POST
 router.post('/splash', function (req, res) {
-    console.log('Auditor is: ' + req.body.shift);
-    console.log('Unit is: ' + req.body.shift);
-    res.redirect('/form');
+  if (req.body.select.option.name == truck) {res.redirect('/truck');}
+  else if (req.body.select.option.name == brush) {res.redirect('/brush');}
 });
 
 router.get('/truck', function(req, res, next) {
@@ -157,7 +148,7 @@ router.get('/truck', function(req, res, next) {
     label: 'Air Tank Psi: '
   }];
 
-  res.render('form', {
+  res.render('truckForm', {
     title: ':UnitNum Form:',
     ruleSet: ruleSet
   });
