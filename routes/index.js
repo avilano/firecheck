@@ -13,14 +13,15 @@ router.post('/', function (req, res) {
 });
 
 router.get('/splash', function(req, res, next) {
+  console.log(req.body);
   res.render('splash', {
     title: 'Equipment - Weekly Report'
   });
 });
 // Hanlde POST
 router.post('/splash', function (req, res) {
-  if (req.body.select.option.name == truck) {res.redirect('/truck');}
-  else if (req.body.select.option.name == brush) {res.redirect('/brush');}
+  // if (req.body == truck) {res.redirect('/truck');}
+  // else if (req.body == brush) {res.redirect('/brush');}
 });
 
 router.get('/truck', function(req, res, next) {
