@@ -7,6 +7,23 @@ a {
   color: #00B7FF;
 }
 
-table, th, td {
-   border: 1px solid black;
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 40px;
 }
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+th, td {
+    padding: 50%;
+    overflow: hidden;
+
+}
+button  {
+  margin: 10px !important;
+};

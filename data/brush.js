@@ -1,5 +1,5 @@
 module.exports = {
-  'engine-compartment': [{
+  'Engine Compartment': [{
     id: 'battery-compartment',
     value: 'battery-compartment',
     name: 'battery-compartment',
@@ -36,7 +36,7 @@ module.exports = {
     type: 'dropdown',
     label: 'Engine Appearance:'
   }],
-  'outer-perimeter': [{
+  'Outer Perimeter': [{
     id: 'tire-pressure',
     value: 'tire-pressure',
     name: 'tire-pressure',
@@ -85,7 +85,7 @@ module.exports = {
     type: 'dropdown',
     label: 'Primer Reservoir Level:'
   }],
-  'start-engine': [{
+  'Start Engine': [{
     id: 'elec-switch',
     value: 'elec-switch',
     name: 'elec-switch',
@@ -146,269 +146,269 @@ module.exports = {
     type: 'dropdown',
     label: 'Air Indicator:'
   }],
-  'inside-cab': [{
+  'Inside Cabin': [{
     id: 'flash-lights',
     value: 'flash-lights',
     name: 'flash-lights',
-    type: 'dropdownQty',
-    label: 'Flash Light'
+    type: 'dropdown',
+    label: 'Qty: 1 | Flash Light:'
   }, {
     id: 'forestry-suits',
     value: 'forestry-suits',
     name: 'forestry-suits',
-    type: 'dropdownQty',
-    label: 'Forestry Suits'
+    type: 'dropdown',
+    label: 'Qty: 3 | Forestry Suits:'
   }, {
     id: 'medical-bag',
     value: 'medical-bag',
     name: 'medical-bag',
-    type: 'dropdownQty',
-    label: 'Medical Bag'
+    type: 'dropdown',
+    label: 'Qty: 1 | Medical Bag:'
   }, {
     id: 'camera-monitor',
     value: 'camera-monitor',
     name: 'camera-monitor',
-    type: 'dropdownQty',
-    label: 'Camera Monitor'
+    type: 'dropdown',
+    label: 'Qty: 1 | Camera Monitor:'
   }, {
     id: 'face-mask',
     value: 'face-mask',
     name: 'face-mask',
-    type: 'dropdownQty',
-    label: 'Face Mask'
+    type: 'dropdown',
+    label: 'Qty: 1 | Face Mask:'
   }],
-  'driver-side-riding-area': [{
+  'Driver Side Riding Area': [{
     id: 'red-line',
     value: 'red-line',
     name: 'red-line',
-    type: 'dropdownQty',
-    label: 'Red Line Hose W/ Nozzle'
+    type: 'dropdown',
+    label: 'Qty: 1 | Red Line Hose W/ Nozzle:'
   }, {
     id: 'chop-block',
     value: 'chop-block',
     name: 'chop-block',
-    type: 'dropdownQty',
-    label: 'Chop Block'
+    type: 'dropdown',
+    label: 'Chop Block:'
   }],
-  'compartment1-driver-side': [{
+  'Driver Side Compartment 1': [{
     id: 'bolt-cutters',
     value: 'bolt-cutters',
     name: 'bolt-cutters',
-    type: 'dropdownQty',
-    label: 'Bolt Cutters'
+    type: 'dropdown',
+    label: 'Qty: 1 | Bolt Cutters:'
   }, {
     id: 'foam',
     value: 'foam',
     name: 'foam',
-    type: 'dropdownQty',
-    label: '5 gal Class A Foam'
+    type: 'dropdown',
+    label: 'Qty: 1 | 5 Gal Class A Foam:'
   }],
-  'compartment2_3-driver-side': [{
+  'Driver Side Compartment 2 & 3': [{
     id: 'tow-strap',
     value: 'tow-strap',
     name: 'tow-strap',
-    type: 'dropdownQty',
-    label: 'Tow Strap'
+    type: 'dropdown',
+    label: 'Qty: 1 | Tow Strap:'
   }, {
     id: 'pulaski-axe',
     value: 'pulaski-axe',
     name: 'pulaski-axe',
-    type: 'dropdownQty',
-    label: 'Pulaski Axe'
+    type: 'dropdown',
+    label: 'Qty: 1 | Pulaski Axe:'
   }, {
     id: 'traffic-cones',
     value: 'traffic-cones',
     name: 'traffic-cones',
-    type: 'dropdownQty',
-    label: 'Traffic Cones'
+    type: 'dropdown',
+    label: 'Qty: 5 | Traffic Cones:'
   }, {
     id: 'metal-step',
     value: 'metal-step',
     name: 'metal-step',
-    type: 'dropdownQty',
+    type: 'dropdown',
     label: 'Metal Step'
   }, {
     id: 'drip-torch',
     value: 'drip-torch',
     name: 'drip-torch',
-    type: 'dropdownQty',
-    label: 'Drip Torch'
+    type: 'dropdown',
+    label: 'Qty: 1 | Drip Torch:'
   }, {
     id: 'mclaski-tool',
     value: 'mclaski-tool',
     name: 'mclaski-tool',
-    type: 'dropdownQty',
-    label: 'McLaski Tool'
+    type: 'dropdown',
+    label: 'Qty: 1 | McLaski Tool:'
   }],
-  'compartment4-driver-side': [{
+  'Driver Side Compartment 4': [{
     id: 'wrench-set',
     value: 'wrench-set',
     name: 'wrench-set',
-    type: 'dropdownQty',
-    label: 'Hydrant Wrench Set'
+    type: 'dropdown',
+    label: 'Hydrant Wrench Set:'
   }, {
     id: 'nozzle',
     value: 'nozzle',
     name: 'nozzle',
-    type: 'dropdownQty',
-    label: 'Nozzle w/ 2 1/2\" - 1/2\" Adaptor'
+    type: 'dropdown',
+    label: 'Qty: 1 | Nozzle w/ 2 1/2\" - 1/2\" Adaptor:'
   }, {
     id: 'low-strainer',
     value: 'low-strainer',
     name: 'low-strainer',
-    type: 'dropdownQty',
-    label: 'Low Water Strainer'
+    type: 'dropdown',
+    label: 'Low Water Strainer:'
   }, {
     id: 'gated-y',
     value: 'gated-y',
     name: 'gated-y',
-    type: 'dropdownQty',
-    label: '1 1/2\" - 1/2\" Gated Y'
+    type: 'dropdown',
+    label: 'Qty: 1 | 1 1/2\" - 1/2\" Gated Y:'
   }, {
     id: 'double-males',
     value: 'doubles-males',
     name: 'double-males',
-    type: 'dropdownQty',
-    label: '1 1/2\" Double Males'
+    type: 'dropdown',
+    label: 'Qty: 2 | 1 1/2\" Double Males:'
   }, {
     id: 'double-females',
     value: 'double-females',
     name: 'double-females',
-    type: 'dropdownQty',
-    label: '1 1/2\" Double Females'
+    type: 'dropdown',
+    label: 'Qty: 2 | 1 1/2\" Double Females:'
   }],
-  'passenger-side-riding-area': [{
+  'Passenger Side Riding Area': [{
     id: 'red-line',
     value: 'red-line',
     name: 'red-line',
-    type: 'dropdownQty',
-    label: 'Red Line Hose w/ Nozzle'
+    type: 'dropdown',
+    label: 'Qty: 1 | Red Line Hose w/ Nozzle:'
   }],
-  'compartment1-passenger-side': [{
+  'Passenger Side Compartment 1': [{
     id: 'foam',
     value: 'foam',
     name: 'foam',
-    type: 'dropdownQty',
-    label: '5 gal Class A Foam'
+    type: 'dropdown',
+    label: 'Qty: 1 | 5 Gal Class A Foam:'
   }],
-  'compartment2_3-passenger-side': [{
+  'Passenger Side Compartment 2 & 3': [{
     id: 'mclaski-tool',
     value: 'mclaski-tool',
     name: 'mclaski-tool',
     type: 'dropdownQty',
-    label: 'McLaski Tool'
+    label: 'Qty: 1 | McLaski Tool:'
   }, {
     id: 'drip-torch',
     value: 'drip-torch',
     name: 'drip-torch',
-    type: 'dropdownQty',
-    label: 'Drip Torch'
+    type: 'dropdown',
+    label: 'Qty: 1 | Drip Torch:'
   }, {
     id: 'pulaski-axe',
     value: 'pulaski-axe',
     name: 'pulaski-axe',
     type: 'dropdownQty',
-    label: 'Pulaski Axe'
+    label: 'Qty: 1 | Pulaski Axe:'
   }, {
     id: 'chain-saw',
     value: 'chain-saw',
     name: 'chain-saw',
-    type: 'dropdownQty',
-    label: 'Chain Saw'
+    type: 'dropdown',
+    label: 'Qty: 1 | Chain Saw:'
   }, {
     id: 'water-cooler',
     value: 'water-cooler',
     name: 'water-cooler',
-    type: 'dropdownQty',
-    label: '5 gal Water Cooler'
+    type: 'dropdown',
+    label: 'Qty: 1 | 5 Gal Water Cooler:'
   }, {
     id: 'pump-bags',
     value: 'pump-bags',
     name: 'pump-bags',
-    type: 'dropdownQty',
-    label: 'Yellow Water Pump Bags'
+    type: 'dropdown',
+    label: 'Qty: 2 | Yellow Water Pump Bags:'
   }],
-  'compartment4-passenger-side': [{
+  'Passenger Side Compartment 4': [{
     id: 'forestry-hose',
     value: 'forestry-hose',
     name: 'forestry-hose',
-    type: 'dropdownQty',
-    label: '1\" Forestry Hose'
+    type: 'dropdown',
+    label: 'Qty: 200\' | 1\" Forestry Hose:'
   }],
-  'top-driver-side-compartment': [{
+  'Top Driver Side Compartment': [{
     id: 'swatter',
     value: 'swater',
     name: 'swatter',
-    type: 'dropdownQty',
-    label: 'Fire Swatter'
+    type: 'dropdown',
+    label: 'Qty: 1 | Fire Swatter:'
   }, {
     id: 'rake',
     value: 'rake',
     name: 'rake',
-    type: 'dropdownQty',
-    label: 'Forestry Rake'
+    type: 'dropdown',
+    label: 'Qty: 1 | Forestry Rake:'
   }],
-  'top-passenger-side-compartment': [{
+  'Top Passenger Side Compartment': [{
     id: 'swatter',
     value: 'swater',
     name: 'swatter',
-    type: 'dropdownQty',
-    label: 'Fire Swatter'
+    type: 'dropdown',
+    label: 'Qty: 1 | Fire Swatter:'
   }, {
     id: 'rake',
     value: 'rake',
     name: 'rake',
-    type: 'dropdownQty',
-    label: 'Forestry Rake'
+    type: 'dropdown',
+    label: 'Qty: 1 | Forestry Rake:'
   }],
-  'front-of-unit': [{
+  'Front Of Unit': [{
     id: 'winch',
     value: 'winch',
     name: 'winch',
-    type: 'dropdownQty',
-    label: 'Winch'
+    type: 'dropdown',
+    label: 'Qty: 1 | Winch:'
   }, {
     id: 'cameras',
     value: 'cameras',
     name: 'cameras',
-    type: 'dropdownQty',
-    label: 'Cameras'
+    type: 'dropdown',
+    label: 'Qty: 2 | Cameras:'
   }],
-  'top-of-unit': [{
+  'Top Of Unit': [{
     id: 'suction-hose',
     value: 'suction-hose',
     name: 'suction-hose',
-    type: 'dropdownQty',
-    label: '2 1/2\" Hard Suction Hose'
+    type: 'dropdown',
+    label: 'Qty: 3 | 2 1/2\" Hard Suction Hose:'
   }, {
     id: 'hose-section',
     value: 'hose-section',
     name: 'hose-section',
-    type: 'dropdownQty',
-    label: 'Section of 2 1/2\" Hose'
+    type: 'dropdown',
+    label: 'Qty: 1 | Section of 2 1/2\" Hose:'
   }, {
     id: 'red-line',
     value: 'red-line',
     name: 'red-line',
-    type: 'dropdownQty',
-    label: 'Red Lines w/ Nozzle'
+    type: 'dropdown',
+    label: 'Qty: 2 | Red Lines w/ Nozzle:'
   }, {
     id: 'foam',
     value: 'foam',
     name: 'foam',
-    type: 'dropdownQty',
-    label: '5 gal Class A Foam'
+    type: 'dropdown',
+    label: 'Qty: 2 | 5 Gal Class A Foam:'
   }, {
     id: 'air-tank',
     value: 'air-tank',
     name: 'air-tank',
-    type: 'dropdownQty',
-    label: 'Air Tank'
+    type: 'dropdown',
+    label: 'Qty: 1 | Air Tank:'
   }, {
     id: 'combi-tool',
     value: 'combi-tool',
     name: 'combi-tool',
-    type: 'dropdownQty',
-    label: 'Combi Tool'
+    type: 'dropdown',
+    label: 'Qty: 1 | Combi Tool:',
   }]
 };
