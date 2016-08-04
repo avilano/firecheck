@@ -42,4 +42,5 @@ router.post('/rescue', function(req, res, next) {
   res.render('submitted', {
   });
 });
+
 module.exports = router;
