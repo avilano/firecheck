@@ -6,7 +6,8 @@ mixin range(rule)
   input.form-control(type=rule.type, required, min=rule.options.min, max=rule.options.max, step=rule.options.step)
   
 mixin dropdown(rule)
-  label=rule.label
+  label(id='qtyid')=rule.qty
+  label(id='nameid')=rule.label
   select(id='dropCheck' type=rule.type, required)
     option(value='-1')
     option(value='true') Satisfactory
@@ -30,7 +31,7 @@ block content
           b
             i Pharr Fire-Rescue Vehicle Checklist
 
-  form(action="", method="post")
+  form(action="", name="fireCheck", method="POST")
     table#mainData
       tr
         td Date: #{moment(Date.now()).format('MM/DD/YYYY')}

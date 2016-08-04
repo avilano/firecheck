@@ -4,14 +4,14 @@ block content
     h1= title
     hr
     p Please select the vehicle to audit:
-    form(action="", name="fireform", method="post")
+    form(action="", name="vehicleSelect", method="POST")
       div.input
         span.Vehicle 
         select(class='truckType' name='vechiclePicker')
-          option Select a Vehicle
+          option(value='none') Select a Vehicle
           option(value='truck') Truck
           option(value='brush') Brush
           option(value='rescue') Rescue
       br
       div.actions
-          input(type="submit", value="Select")
+       input(type="submit", value="Select")
