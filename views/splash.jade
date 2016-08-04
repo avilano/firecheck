@@ -1,17 +1,25 @@
 extends layout
 
 block content
-    h1= title
-    hr
-    p Please select the vehicle to audit:
-    form(action="", name="vehicleSelect", method="POST")
-      div.input
-        span.Vehicle 
-        select(class='truckType' id='vechiclePicker' name='vechiclePicker' required)
-          option(value='') Vehicle
-          option(value='truck') Truck
-          option(value='brush') Brush
-          option(value='rescue') Rescue
-      br
-      div.actions
-       input(type="submit", value="Select")
+  table#logo
+    tr
+      img(src='http://pharr-tx.gov/wp-content/uploads/2016/05/City-of-Pharr-Logo.png', alt='pharr-tx')
+    tr
+      div(align='center')
+        h1
+          b
+            i Pharr Fire-Rescue Vehicle Checklist
+      hr
+      h2= title
+      p Please select the vehicle to audit:
+      form(action="", name="vehicleSelect", method="POST")
+        div.input
+          span.Vehicle 
+          select(class='truckType' id='vechiclePicker' name='vechiclePicker' required)
+            option(value='') Vehicle
+            option(value='truck') Truck
+            option(value='brush') Brush
+            option(value='rescue') Rescue
+        br
+        div.actions
+         button(type="submit", value="Select").btn.btn-default Select

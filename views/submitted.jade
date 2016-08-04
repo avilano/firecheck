@@ -10,3 +10,8 @@ block content
             i Pharr Fire-Rescue Vehicle Checklist
 
   h2 The form has been submitted.
+  button(onclick="toSplash()", id='returnButton').btn.btn-default Return
+  script.
+    function toSplash() {
+      window.location.href = '/splash'
+    }
