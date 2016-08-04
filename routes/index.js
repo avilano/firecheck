@@ -7,16 +7,15 @@ router.get('/', function(req, res, next) {
     title: 'Equipment - Weekly Report Login'
   });
 });
-router.post('/', function (req, res) {
-  res.redirect('/splash');
-});
-
 router.get('/splash', function(req, res, next) {
   res.render('splash', {
     title: 'Equipment - Weekly Report'
   });
 });
 // Hanlde POST
+router.post('/', function (req, res) {
+  res.redirect('/splash');
+});
 router.post('/splash', function (req, res) {
     if (req.body.vechiclePicker == 'truck') {
       console.log('user selected truck');
@@ -30,5 +29,17 @@ router.post('/splash', function (req, res) {
       console.log('user selected rescue');
       res.redirect('/rescue');
     }
+});
+router.post('/brush', function(req, res, next) {
+  res.render('submitted', {
+  });
+});
+router.post('/truck', function(req, res, next) {
+  res.render('submitted', {
+  });
+});
+router.post('/rescue', function(req, res, next) {
+  res.render('submitted', {
+  });
 });
 module.exports = router;
