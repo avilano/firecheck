@@ -8,14 +8,14 @@ a {
 }
 
 #mainData{
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
 }
 .mainTr, .mainTd{
-border: 1px solid #ddd;
-text-align: center;
-height: 40px;
+  border: 1px solid #ddd;
+  text-align: center;
+  height: 40px;
 }
 
 button{
@@ -37,10 +37,10 @@ button{
   float: left;
 }
 #droptabler{
-border-width: 0px;
-width: 65%;
-border-collapse: collapse;
-table-layout: fixed;
+  border-width: 0px;
+  width: 65%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 #qtyid{
   float: right;
@@ -52,6 +52,11 @@ table-layout: fixed;
   margin-left: 10px;
 }
 #textareaDiv{
-margin-top: 35px;
-margin-left:285px;
+  margin-top: 35px;
+  margin-left:285px;
+}
+#cityLogo{
+  : center;
+  height: auto !important;
+  width: 350px !important;
 }
