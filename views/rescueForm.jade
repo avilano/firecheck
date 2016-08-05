@@ -52,9 +52,9 @@ block content
       tr 
         td Engine Hrs: 
           input(type='text', id='enginebox', name='engHrs' autofocus, required)
-        td VIN# 4S7HU2D957CO59838
+        td VIN# 4S7HU2D957CO59838S
         td(colspan='2') Checked By: 
-          input(type='text', id='auditorbox', name='auditor', required)
+          input(ttype='text', id='auditrbox', name='auditor', required)
     br
     p Please select if item is Satisfactory/Unsatisfactory:
     hr
@@ -74,7 +74,14 @@ block content
             +dropdown(rule)
       label Additional Comments:
       br
-      textarea#comments(name='comments', rows="5" cols="30",style='font-family:sans-serif;')
+      textarea#comments(name='comments', placeholder="Please submit additional comments if a field is unsatisfactory", 
+      rows="4", cols="40", style='font-family:sans-serif;')
       hr      
-    button.btn.btn-default(type='submit') Submit
-    button.btn.btn-default(type='reset') Clear    
+    button.btn.btn-default(type='submit', id='submitButton') Submit
+    button.btn.btn-default(type='reset', id='clearButton') Clear
+    button(onclick="toSplash()", id='returnButton').btn.btn-default Return
+    script.
+      function toSplash() {
+        window.location.href = '/splash'
+      }
+    a(href="#top") Go back to the top
