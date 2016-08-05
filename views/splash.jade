@@ -13,13 +13,12 @@ block content
       h2= title
       p Please select the vehicle to audit:
       form(action="", name="vehicleSelect", method="POST")
-        div.input
+        div.form-group
           span.Vehicle 
-          select(class='truckType' id='vechiclePicker' name='vechiclePicker' required)
-            option(value='') Vehicle
+          select(class='form-control' id='vechiclePicker' name='vechiclePicker' required)
+            option(value='')
             option(value='truck') Truck
             option(value='brush') Brush
             option(value='rescue') Rescue
-        br
         div.actions
          button(type="submit", value="Select").btn.btn-default Select
