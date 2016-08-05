@@ -827,7 +827,7 @@ module.exports = {
     value: 'c-collar',
     name: 'c-collar',
     type: 'dropdown',
-    label: 'C-Collars:',
+    label: 'C-Collars:'
   }, {
     id: 'cpr-board',
     value: 'cpr-board',
@@ -940,7 +940,7 @@ module.exports = {
     type: 'dropdown',
     label: 'Quartz Box Drop Lights:',
     qty: 'Qty: 1'
-  }, ,{
+  }, {
     id: 'fan-brace',
     value: 'fan-brace',
     name: 'fan-brace',
@@ -983,7 +983,7 @@ module.exports = {
     type: 'dropdown',
     label: 'Dewalt Saw:',
     qty: 'Qty: 1'
-  },{
+  }, {
     id: 'circular-saw',
     value: 'circular-saw',
     name: 'circular-saw',
@@ -997,14 +997,14 @@ module.exports = {
     type: 'dropdown',
     label: 'AMK-30 Spreaders:',
     qty: 'Qty: 1'
-  },{
+  }, {
     id: 'cutters',
     value: 'cutters',
     name: 'cutters',
     type: 'dropdown',
     label: 'AMK-21 Cutters:',
     qty: 'Qty: 1'
-  },{
+  }, {
     id: '60-rambar',
     value: '60-rambar',
     name: '60-rambar',
