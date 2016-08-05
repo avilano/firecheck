@@ -6,12 +6,20 @@ mixin range(rule)
   input.form-control(type=rule.type, required, min=rule.options.min, max=rule.options.max, step=rule.options.step)
   
 mixin dropdown(rule)
-  label(id='qtyid')=rule.qty
-  label(id='nameid')=rule.label
-  select(id='dropCheck' type=rule.type, required)
-    option(value='')
-    option(value='true') Satisfactory
-    option(value='false') Unsatisfactory
+  table#droptabler
+    tr
+      td
+        div(align='center')
+        label(id='qtyid')=rule.qty
+      td
+        div(align='center')
+          label(id='nameid')=rule.label
+      td
+        div(align='center')
+          select.form-control(id='dropCheck' type=rule.type, required)
+            option(value='')
+            option(value='true') Satisfactory
+            option(value='false') Unsatisfactory
   
 mixin text(rule)
   label= rule.label 
@@ -24,7 +32,7 @@ mixin checkbox(rule)
 block content
   table#logo
     tr
-      img(src='http://pharr-tx.gov/wp-content/uploads/2016/05/City-of-Pharr-Logo.png', alt='pharr-tx')
+      img(id='cityLogo', src='http://pharr-tx.gov/wp-content/uploads/2016/05/City-of-Pharr-Logo.png', alt='pharr-tx')
     tr
       div(align='center')
         h1
@@ -33,28 +41,30 @@ block content
 
   form(action="", name="fireCheck", method="POST")
     table#mainData
-      tr
-        td Date: #{moment(Date.now()).format('MM/DD/YYYY')}
-        td Unit# 321 - Brush 32
-        td Shift: 
-          select(id='shifts', name='shiftbox', required)
-            option(value='')
-            option(value='A') A
-            option(value='B') B
-            option(value='C') C
+      tr.mainTr
+        td.mainTd Date: #{moment(Date.now()).format('MM/DD/YYYY')}
+        td.mainTd Unit# 321 - Brush 32
+        td.mainTd Shift: 
+          div.form-group
+            select(class='form-control', id='shifts', name='shiftbox', required)
+              option(value='')
+              option(value='A') A
+              option(value='B') B
+              option(value='C') C
             
-        td Station: 
-          select(id='stations', name='stationbox', required)
-            option(val='')
-            option(value='1') 1 - FM 495
-            option(value='2') 2 - Central Station
-            option(value='3') 3 - Las Milpas
-      tr 
-        td Engine Hrs: 
-          input(type='text', id='enginebox', name='engHrs' autofocus, required)
-        td VIN# 3FRNW65T56V243834
-        td(colspan='2') Checked By: 
-          input(ttype='text', id='auditrbox', name='auditor', required)
+        td.mainTd Station: 
+          div.form-group
+            select(class='form-control', id='stations', name='stationbox', required)
+              option(val='')
+              option(value='1') 1 - FM 495
+              option(value='2') 2 - Central Station
+              option(value='3') 3 - Las Milpas
+      tr.mainTr
+        td.mainTd Engine Hrs: 
+          input(class='form-control', type='text', id='enginebox', name='engHrs' autofocus, required)
+        td.mainTd VIN# 3FRNW65T56V243834
+        td.mainTd(colspan='2') Checked By: 
+          input(class='form-control', type='text', id='auditrbox', name='auditor', required)
     br
     p Please select if item is Satisfactory/Unsatisfactory:
     hr
@@ -72,10 +82,11 @@ block content
             +checkbox(rule)
           else if rule.type == 'dropdown'
             +dropdown(rule)
-      label Additional Comments:
-      br
-      textarea#comments(name='comments', placeholder="Please submit additional comments if a field is unsatisfactory", 
-      rows="4", cols="40", style='font-family:sans-serif;')
+      div(id='textareaDiv')
+        label Additional Comments:
+        br
+        textarea#comments(name='comments', placeholder="Please submit additional comments if a field is unsatisfactory", 
+        rows="4", cols="40", style='font-family:sans-serif;')
       hr      
     button.btn.btn-default(type='submit', id='submitButton') Submit
     button.btn.btn-default(type='reset', id='clearButton') Clear

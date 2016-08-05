@@ -201,7 +201,7 @@ module.exports = {
     value: 'bolt-cutters',
     name: 'bolt-cutters',
     type: 'dropdown',
-    label: 'Qty: 1 | Bolt Cutters:',
+    label: 'Bolt Cutters:',
     qty: 'Qty: 1'
   }, {
     id: 'foam',
