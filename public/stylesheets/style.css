@@ -7,7 +7,15 @@ a {
   color: #00B7FF;
 }
 
-#mainData{
+p {
+  font-size: 17px;
+}
+
+i {
+  color: #cc0000;
+}
+
+#mainData {
   border-collapse: collapse;
   table-layout: fixed;
   width: 100%;
@@ -18,45 +26,45 @@ a {
   height: 40px;
 }
 
-button{
+button {
   margin: 10px !important;
 }
-.form-control{
+.form-control {
   width: auto !important;
 }
-#auditrbox{
+#auditrbox {
   width: 350px !important;
 }
-#auditrbox, #enginebox, #shifts, #stations{
+#auditrbox, #enginebox, #shifts, #stations {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
   width: auto;
 }
-#nameid{
+#nameid {
   float: left;
 }
-#droptabler{
+#droptabler {
   border-width: 0px;
   width: 65%;
   border-collapse: collapse;
   table-layout: fixed;
 }
-#qtyid{
+#qtyid {
   float: right;
   margin-right: 25px;
   width: auto !important;
 }
-#dropCheck{
+#dropCheck {
   float: left;
   margin-left: 10px;
 }
-#textareaDiv{
+#textareaDiv {
   margin-top: 35px;
   margin-left:285px;
 }
-#cityLogo{
+#cityLogo {
   : center;
   height: auto !important;
-  width: 350px !important;
+  width: 450px !important;
 }

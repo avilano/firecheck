@@ -3,11 +3,14 @@ extends layout
 block content
   table#logo
     tr
-      img(id='cityLogo', src='http://pharr-tx.gov/wp-content/uploads/2016/05/City-of-Pharr-Logo.png', alt='pharr-tx')
+      div(align='center')
+        img(id='cityLogo', src='http://pharr-tx.gov/wp-content/uploads/2016/05/City-of-Pharr-Logo.png', alt='pharr-tx')
     tr
       div(align='center')
         h1
-          i Pharr Fire-Rescue Vehicle Checklist
+          b
+            i Pharr Fire-Rescue Vehicle Checklist
+        br
       hr
       h2=title
       form(action="", name="loginform", method="post")
