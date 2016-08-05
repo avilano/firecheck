@@ -5,10 +5,11 @@ mixin range(rule)
   label= rule.label 
   input.form-control(type=rule.type, required, min=rule.options.min, max=rule.options.max, step=rule.options.step)
   
-mixin dropdown(rule) 
-  label= rule.label 
-  select
-    option(value='-1')
+mixin dropdown(rule)
+  label(id='qtyid')=rule.qty
+  label(id='nameid')=rule.label
+  select(id='dropCheck' type=rule.type, required)
+    option(value='')
     option(value='true') Satisfactory
     option(value='false') Unsatisfactory
   
@@ -20,63 +21,60 @@ mixin checkbox(rule)
   label= rule.label
   input.form-control(type=rule.type, required)
 
-  block content
-    table#logo
-      tr
-        img(src='http://pharr-tx.gov/wp-content/uploads/2016/05/City-of-Pharr-Logo.png', alt='pharr-tx')
-      tr
-        div(align='center')
-          h1
-            b
-              i Pharr Fire-Rescue Vehicle Checklist
+block content
+  table#logo
+    tr
+      img(src='http://pharr-tx.gov/wp-content/uploads/2016/05/City-of-Pharr-Logo.png', alt='pharr-tx')
+    tr
+      div(align='center')
+        h1
+          b
+            i Pharr Fire-Rescue Vehicle Checklist
 
+  form(action="", name="fireCheck", method="POST")
     table#mainData
-      tr 
+      tr
         td Date: #{moment(Date.now()).format('MM/DD/YYYY')}
         td Unit# 312 - Rescue 32
         td Shift: 
-          select
-            option(value='-1')
+          select(id='shifts', name='shiftbox', required)
+            option(value='')
             option(value='A') A
             option(value='B') B
             option(value='C') C
             
         td Station: 
-          select
-            option(val='-1')
+          select(id='stations', name='stationbox', required)
+            option(val='')
             option(value='1') 1 - FM 495
             option(value='2') 2 - Central Station
             option(value='3') 3 - Las Milpas
       tr 
         td Engine Hrs: 
-          input(type='text', name='engHrs' autofocus)
+          input(type='text', id='enginebox', name='engHrs' autofocus, required)
         td VIN# 4S7HU2D957CO59838
         td(colspan='2') Checked By: 
-          input(type='text', name="auditor")
+          input(type='text', id='auditorbox', name='auditor', required)
     br
     p Please select if item is Satisfactory/Unsatisfactory:
-    
     hr
-    
-    form(action="", method="post")
-      - each set, section in ruleSet
-        h3=section
-        br
-        - each rule in set
-          .form-group
-            if rule.type == 'text'
-              +text(rule)
-            else if rule.type == 'range'
-              +range(rule)
-            else if rule.type == 'checkbox'
-              +checkbox(rule)
-            else if rule.type == 'dropdown'
-              +dropdown(rule)
-        label Additional Comments:
-        br
-        textarea#comments(name='comments', rows="5" cols="30",style='font-family:sans-serif;')
-        hr
-        
-      button.btn.btn-default(type='submit') Submit
-        button.btn.btn-default(type='clear') Clear
-    
+  
+    - each set, section in ruleSet
+      h3=section
+      br
+      - each rule in set
+        .form-group
+          if rule.type == 'text'
+            +text(rule)
+          else if rule.type == 'range'
+            +range(rule)
+          else if rule.type == 'checkbox'
+            +checkbox(rule)
+          else if rule.type == 'dropdown'
+            +dropdown(rule)
+      label Additional Comments:
+      br
+      textarea#comments(name='comments', rows="5" cols="30",style='font-family:sans-serif;')
+      hr      
+    button.btn.btn-default(type='submit') Submit
+    button.btn.btn-default(type='reset') Clear    
